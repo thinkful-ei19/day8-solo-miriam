@@ -11,13 +11,25 @@ const api = (function () {
       });
   };
 
-  const createItem =function(name, callback) {}
-    
-  //callback('api module works!');
+  const createItem = function(name, callback) {
+    const newItem = JSON.stringify({name});
+    console.log(newItem);
+    $.ajax({
+      url: BASE_URL + '/items',
+      method: 'POST',
+      dataType: 'json',
+      contentType: 'application/json',
+      data: newItem,
+      success: callback
+      });
+
+    };
+
 
 
   return {
     getItems,
+    createItem,
 
   };
 }());
