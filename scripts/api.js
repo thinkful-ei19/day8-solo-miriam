@@ -20,12 +20,10 @@ const api = (function () {
       dataType: 'json',
       contentType: 'application/json',
       data: newItem,
-      success: callback
-      });
+      success: callback 
+    });
 
-    };
-
-
+  };
 
   return {
     getItems,
