@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 'use strict';
 const api = (function () {
-  const BASE_URL = 'https://thinkful-list-api.herokuapp.com/miriamseha';
+  const BASE_URL = 'https://thinkful-list-api.herokuapp.com/bookmarks-miriam';
 
   const getItems = function (callback) {
     $.getJSON(

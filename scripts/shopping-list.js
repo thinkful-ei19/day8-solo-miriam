@@ -2,7 +2,14 @@
 /* global store */
 
 // eslint-disable-next-line no-unused-vars
+
+function displayBookmarkForm(){
+     $("#js-bookmark-form").removeClass("hidden");
+  }
+
 const shoppingList = (function(){
+
+
 
   function generateItemElement(item) {
     let itemTitle = `<span class="shopping-item shopping-item__checked">${item.name}</span>`;
@@ -62,11 +69,9 @@ const shoppingList = (function(){
       const newItemName = $('.js-shopping-list-entry').val();
       $('.js-shopping-list-entry').val('');
       //store.addItem(newItemName);
-      api.createItem(newItemName, (newItem) => {
-        api.getItems((items) => {
-          items.forEach((item) => store.addItem(item));
-          render();
-        });
+      api.createItem(newItemName, (newItem) => {            
+       store.addItem(newItem);
+       render();
       });
       
     });

@@ -6,8 +6,28 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-button, input[type="text"] {
+button, input[type="text"], input[type="submit"] ,textarea{
   padding: 5px;
+  font-size: 11px;
+  margin: 10px;
+}
+
+input[type="radio"] {
+  font-size: 10px;
+}
+.js-bookmark-list-title{
+  width: 100px;
+}
+
+.js-bookmark-list-url{
+  width: 300px;
+}
+
+label{
+  padding: 5px;
+  font-size: 15px;
+  margin: 10px;
+  font-weight: bold;
 }
 
 button:hover {
@@ -18,8 +38,8 @@ button:hover {
   display: none;
 }
 
-#shopping-list-item {
-  width: 250px;
+.bookmark-item {
+  width: 450px;
 }
 
 .container {
@@ -27,18 +47,18 @@ button:hover {
   margin: 0 auto;
 }
 
-.shopping-list {
+.bookmarks-list {
   list-style: none;
   padding-left: 0;
 }
 
-.shopping-list > li {
+.bookmark-item {
   margin-bottom: 20px;
   border: 1px solid grey;
   padding: 20px;
 }
 
-.shopping-item {
+.bookmark-item{
   display: block;
   color: grey;
   font-style: italic;
